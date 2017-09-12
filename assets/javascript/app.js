@@ -42,7 +42,7 @@ function chooseAnswer() {
   }
   questionCounter++;
   if(questionCounter==game.questions.length){
-    questionCounter = 0;
+    questionCounter = -1;
   }
   setTimeout(loadData,3500);//wait 3.5 seconds then load next
 }
@@ -56,6 +56,14 @@ function wasItCorrect (correct) {
     informUser = "Nope!"
 
   }
+  var image = $("<img height=200px>");
+  var image_folder="assets/images/"
+  var srcImage=image_folder+game.images[questionCounter ]
+  image.attr("src", srcImage);
+  var correctAnswer = game.correct[questionCounter];
+  $("#show-image").html("")
+  $("#show-image").append("<div>" + correctAnswer+"</div>")
+  $("#show-image").append(image)
   $("#show-image").css("visibility","visible")
   $(".question-answer").css("visibility","hidden")
   $("#question").text(informUser)
@@ -64,10 +72,11 @@ function wasItCorrect (correct) {
 }
 
 function loadData() {
+  $("#show-image").css("visibility","hidden")
+  
 
-$(".question-answer").css("visibility","visible")
-
-    if(1)  {
+    if(questionCounter>=0)  {
+    $(".question-answer").css("visibility","visible")
     //grab current question to display
     var question = game.questions[questionCounter];
     //display the question to the html dom
@@ -84,8 +93,16 @@ $(".question-answer").css("visibility","visible")
       $(selectedAnswer).attr("data-val",answer)
       //set the text of the html dom to an answer
       $(selectedAnswer).text(answer)
-    }  
-  }
+    } 
+  } else {
+      $("#question").css("visibility","visible")
+      $("#stats-container").css("visibility","visible")
+
+      $("#question").text("All done, heres how you did!")
+      $("#correct").text("Correct Answers: "+ correctCounter);
+      $("#incorrect").text("Incorrect Answers: "+ incorrectCounter);
+      $("#unanswered").text("Unanswered: "+ 1);
+    }
 }
 var questions=[
 "What was the first full length CGI movie?",
@@ -148,7 +165,7 @@ var correct=[
 "The Lion King",
 "Fresh",
 "Skeeter",
-"Mr.Driggers"
+"Mr.Belding"
 ]
 var game = {
  questions:[
@@ -209,7 +226,17 @@ var game = {
  "The Lion King",
  "Fresh",
  "Skeeter",
- "Mr.Driggers"
+ "Mr.Belding"
+ ],
+ images: [
+ "toy_story.jpg",
+ "spice_girl.gif",
+ "chicago-bulls_f.png",
+ "nirvana.jpg",
+ "lion_king.jpeg",
+ "fresh.jpg",
+ "skeeter.gif",
+ "mr_belding.jpg"
  ]
 
 }

@@ -57,6 +57,20 @@ set border,border color, and background color
 	
 
 }
+#stats-container {
+visibility: hidden;
+	position: absolute;
+ 	font-size: 30px;	
+	width:400px;
+	top:50%;
+	right:50%;
+	margin-right: -200px;
+	color: black;
+	background-color: #FFF27A;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFF27A; /*set the color you want here*/	
+}
 #game-title {
 	margin-bottom:50px;
 }
