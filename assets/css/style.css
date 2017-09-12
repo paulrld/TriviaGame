@@ -1,0 +1,105 @@
+/* 
+set alignment of all text to center
+set background image and size 
+*/
+body {
+	text-align:center;
+	background-image: url("../images/opkriub.jpg");
+	background-size: 80%;
+}
+#game-title {
+	color:blue;
+
+}
+.question-answer {
+	visibility: hidden;
+}
+/* set color of main panel to a yellowish color with
+some padding */
+#main-panel {
+	position:relative;
+	background-color:#FFF27A;
+	padding:25px;
+}
+/* 
+move start button to center of main panel
+set border,border color, and background color 
+*/
+#start-button {
+	position: absolute;
+	font-size: 40px;
+	width:400px;
+	top:50%;
+	right:50%;
+	margin-right: -200px;
+	color: black;
+	background-color: #FFF27A;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFF27A; /*set the color you want here*/
+	
+
+}
+
+#show-image {
+	visibility: hidden;
+	position: absolute;
+	font-size: 40px;
+	width:400px;
+	top:50%;
+	right:50%;
+	margin-right: -200px;
+	color: black;
+	background-color: #FFF27A;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFF27A; /*set the color you want here*/
+	
+
+}
+#game-title {
+	margin-bottom:50px;
+}
+
+
+#question{
+	margin-bottom:30px;
+	font-size: 40px
+
+}
+#question-timer {
+	margin-bottom:30px;
+	font-size:40px;
+}
+
+#answer-container {
+	width:50%;
+}
+
+.answer-selection {
+	font-size:40px;
+	margin: 2px;
+	padding:2px;
+	color: black;
+	background-color: #FFF27A;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFF27A; /*set the color you want here*/
+
+}
+/*
+on hover over button answers and start button
+change the color and make cursor a hand 
+*/
+.answer-selection:hover, 
+.answer-selection:focus, 
+.answer-selection:active,
+#start-button:hover, 
+#start-button:focus, 
+#start-button:active {
+	color: black;
+	background-color: #FFCCD0;
+	border-color: blue; /*set the color you want here*/
+	cursor: pointer; cursor: hand;
+
+}
