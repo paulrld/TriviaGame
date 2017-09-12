@@ -7,6 +7,7 @@ window.onload = function() {
   $(".question-answer").css("visibility","hidden")
   $("#main-panel").on("click", "#start-button", startGame);
   $("#main-panel").on("click", ".answer-selection", chooseAnswer);
+  $("#main-panel").on("click", "#start-over", startOver);
   //("#start-button").click(clickthis);
 };
 
@@ -103,6 +104,13 @@ function loadData() {
       $("#incorrect").text("Incorrect Answers: "+ incorrectCounter);
       $("#unanswered").text("Unanswered: "+ 1);
     }
+}
+
+function startOver () {
+  questionCounter=0;
+  $("#stats-container").css("visibility","hidden")
+
+  loadData()
 }
 var questions=[
 "What was the first full length CGI movie?",

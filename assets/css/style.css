@@ -71,6 +71,8 @@ visibility: hidden;
 	border-width: 2px;
 	border-color: #FFF27A; /*set the color you want here*/	
 }
+
+
 #game-title {
 	margin-bottom:50px;
 }
@@ -101,6 +103,16 @@ visibility: hidden;
 	border-color: #FFF27A; /*set the color you want here*/
 
 }
+
+	#start-over	{
+		margin-top:40px;
+	color: black;
+	background-color: #FFF27A;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFF27A; /*set the color you want here*/	
+}
+
 /*
 on hover over button answers and start button
 change the color and make cursor a hand 
@@ -110,7 +122,10 @@ change the color and make cursor a hand
 .answer-selection:active,
 #start-button:hover, 
 #start-button:focus, 
-#start-button:active {
+#start-button:active,
+#start-over:hover, 
+#start-over:focus, 
+#start-over:active {
 	color: black;
 	background-color: #FFCCD0;
 	border-color: blue; /*set the color you want here*/
