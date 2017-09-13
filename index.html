@@ -22,69 +22,77 @@
 </head>
 <body>
   <div class="container">
-      <div class="jumbotron" id=main-panel>
-      <div class="row " id=game-title>
-        <div class="col-md-12">
-          <h1> Totally Trivial Trivia! </h1>
-        </div>
-      </div>
+		<!-- jumbotron to hold all the stuff -->
+	  <div class="jumbotron" id=main-panel>
+	
+			<!-- div row to hold game title information -->
+			<div class="row " id=game-title>
+				<div class="col-md-12">
+					<h1> Totally Trivial Trivia! </h1>
+				</div>
+			</div>
+			
+			<!-- div row to hold timer information -->
+			<div class="row question-answer" id=question-timer>
+				<div class="col-md-12">
+					Time Remaining: 30
+				</div>
+			</div>
+			
+			<!-- div row to hold question -->
+			<div class="row question-answer" id=question>
+				<div class="col-md-12">
+					question
+				</div>
+			</div>
+			
+			<!-- div container holding 4 answer row -->
+			<div class="container question-answer" id=answer-container>
+				<div class="row answer-selection">
+					<div class="col-md-12">
+						answer 1
+					</div>
+				</div>
+				<div class="row answer-selection">
+					<div class="col-md-12">
+						answer 2
+					</div>
+				</div>
+				<div class="row answer-selection">
+					<div class="col-md-12">
+						answer 3
+					</div>
+				</div>
+				<div class="row answer-selection">
+					<div class="col-md-12">
+						answer 4
+					</div>
+				</div>
+			</div>
 
+			<!-- div for start button -->
+			<div id=start-button>
+				START
+			</div>
 
-      <div class="row question-answer" id=question-timer>
-        <div class="col-md-12">
-          Time Remaining: 30
-        </div>
-      </div>
-      <div class="row question-answer" id=question>
-        <div class="col-md-12">
-          question
-        </div>
-      </div>
-      <div class="container question-answer" id=answer-container>
-        <div class="row answer-selection">
-          <div class="col-md-12">
-            answer 1
-          </div>
-        </div>
-        <div class="row answer-selection">
-          <div class="col-md-12">
-            answer 2
-          </div>
-        </div>
-        <div class="row answer-selection">
-          <div class="col-md-12">
-            answer 3
-          </div>
-        </div>
-        <div class="row answer-selection">
-          <div class="col-md-12">
-            answer 4
-          </div>
-        </div>
-      </div>
-
-      <div id=start-button>
-        START
-      </div>
-
-      <div id=show-image>
-
-      </div>
-
-      <div id=stats-container>
-        <div id=correct>
-        </div>
-        <div id=incorrect>
-        </div>
-        <div id=unanswered>
-        </div>
-        <div id=start-over>
-          Start Over?
-        </div>
-      </div>
-
-      </div>
-
+			<!-- div for showing correct answer image -->
+			<div id=show-image>
+			</div>
+			
+			<!-- div for showing stats at end of all  -->
+			<!-- questions also includes Star Over button -->
+			<div id=stats-container>
+				<div id=correct>
+				</div>
+				<div id=incorrect>
+				</div>
+				<div id=unanswered>
+				</div>
+				<div id=start-over>
+					Start Over?
+				</div>
+			</div>
+	  </div>
   </div>
 
   <script type="text/javascript" src="assets/javascript/app.js"></script>

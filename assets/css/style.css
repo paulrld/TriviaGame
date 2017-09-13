@@ -9,7 +9,7 @@ body {
 }
 #game-title {
 	color:blue;
-
+	margin-bottom:50px;
 }
 .question-answer {
 	visibility: hidden;
@@ -22,7 +22,7 @@ some padding */
 	padding:25px;
 }
 /* 
-move start button to center of main panel
+move start button to center of jumbotron
 set border,border color, and background color 
 */
 #start-button {
@@ -37,11 +37,11 @@ set border,border color, and background color
 	border-style: solid;
 	border-width: 2px;
 	border-color: #FFF27A; /*set the color you want here*/
-	
-
 }
 
-#show-image {
+/* hide the show image container that will show 
+the correct image after correct/correct/unanaswered
+move show image stuff into center of jumbotron */#show-image {
 	visibility: hidden;
 	position: absolute;
 	font-size: 40px;
@@ -49,34 +49,20 @@ set border,border color, and background color
 	top:50%;
 	right:50%;
 	margin-right: -200px;
-	color: black;
-	background-color: #FFF27A;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #FFF27A; /*set the color you want here*/
-	
-
 }
+/* hide the stats container that will show correct/incorrect/unanswered stuff 
+move to center of jumbotron
+*/
 #stats-container {
-visibility: hidden;
+	visibility: hidden;
 	position: absolute;
  	font-size: 30px;	
 	width:400px;
 	top:50%;
 	right:50%;
 	margin-right: -200px;
-	color: black;
-	background-color: #FFF27A;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #FFF27A; /*set the color you want here*/	
+
 }
-
-
-#game-title {
-	margin-bottom:50px;
-}
-
 
 #question{
 	margin-bottom:30px;
@@ -92,29 +78,36 @@ visibility: hidden;
 	width:50%;
 }
 
+
 .answer-selection {
 	font-size:40px;
 	margin: 2px;
 	padding:2px;
 	color: black;
+
+	/*create default stuff when cursor is not on answer*/
 	background-color: #FFF27A;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #FFF27A; /*set the color you want here*/
+	border-color: #FFF27A; 
 
 }
 
-	#start-over	{
-		margin-top:40px;
+/*stuff for star over button*/
+#start-over	{
+	margin-top:40px;
 	color: black;
+	
+	/*create default border stuff when cursor is not on answer*/
 	background-color: #FFF27A;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #FFF27A; /*set the color you want here*/	
+	border-color: #FFF27A; 
 }
+
 
 /*
-on hover over button answers and start button
+on hover over button answers, start button, and star over button
 change the color and make cursor a hand 
 */
 .answer-selection:hover, 
@@ -130,5 +123,4 @@ change the color and make cursor a hand
 	background-color: #FFCCD0;
 	border-color: blue; /*set the color you want here*/
 	cursor: pointer; cursor: hand;
-
 }
